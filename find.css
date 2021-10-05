@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(24,11,80);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), linear-gradient(-45deg, rgba(24,11,80,1) 12%, rgba(22,31,66,1) 37%, rgba(42,74,80,1) 63%, rgba(52,76,79,1) 85%);
+    background-size: 400% 400%;
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    color: rgb(221, 193, 157);
+    background: -webkit-linear-gradient(#a7aebb, burlywood);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links a {
+    color: rgb(221, 193, 157);
+    text-decoration: none;
+    letter-spacing: .1rem;
+
+}
+
+.nav-links li{
+    position: relative;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.main-nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #98a0aa;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+
+.main-nav ul li:hover::after{
+    width: 100%;
+}
+
+.short-menu .line1 {
+    width: 25px;
+    height: 1px;
+    background-color: rgb(22, 22, 22);
+    margin: 5px;
+}
+
+.short-menu .line2 {
+    width: 23px;
+    height: 1px;
+    background-color: rgb(22, 22, 22);
+    margin: 5px;
+}
+
+.short-menu .line3 {
+    width: 21px;
+    height: 1px;
+    background-color: rgb(22, 22, 22);
+    margin: 5px;
+}
+
+.short-menu{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px){
+    body{
+        overflow-y: scroll;
+    }
+    
+    .nav-links{
+        width: 60%;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .information-one{
+        margin-bottom: 3rem;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 678px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(24,11,80);
+        background: linear-gradient(-45deg, rgba(24,11,80,1) 12%, rgba(22,31,66,1) 37%, rgba(42,74,80,1) 63%, rgba(52,76,79,1) 85%);
+        background-size: 400% 400%;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .main-nav{
+        background: rgb(24,11,80);
+        background: linear-gradient(-45deg, rgba(24,11,80,1) 12%, rgba(22,31,66,1) 37%, rgba(42,74,80,1) 63%, rgba(52,76,79,1) 85%);
+        background-size: 400% 400%;
+    }
+
+    .short-menu{
+        display: block;
+    }
+
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 100;
+        transform: translateX(0px);
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.information-one{
+    margin-left: 6rem;
+    margin-right: 20rem;
+    color: rgb(19, 18, 17);
+    letter-spacing: .1rem;
+    font-size: 1.2rem;
+    
+}
+
+.information-one h4{
+    margin-top: 10px;
+}
+
+
+/*Form style*/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 4px; /* Add a top margin */
+    margin-bottom: 8px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 4px; /* Add a top margin */
+    margin-bottom: 8px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: rgb(24,11,80);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: rgb(24,11,80);
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
