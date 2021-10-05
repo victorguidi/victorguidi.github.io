@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Images/francisco-moreno-zVUy1bN6z3c-unsplash.jpg);
+    background-color: #cccccc;
+    /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), linear-gradient(-45deg, #313236,#35333d, #120e16, #000000);
+    background-size: 400% 400%;*/
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    color: rgb(221, 193, 157);
+    background: -webkit-linear-gradient(#a7aebb, burlywood);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links a {
+    color: rgb(221, 193, 157);
+    text-decoration: none;
+    letter-spacing: .1rem;
+
+}
+
+.nav-links li{
+    position: relative;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.main-nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #98a0aa;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+
+.main-nav ul li:hover::after{
+    width: 100%;
+}
+
+.short-menu .line1 {
+    width: 25px;
+    height: 1px;
+    background-color: rgb(22, 22, 22);
+    margin: 5px;
+}
+
+.short-menu .line2 {
+    width: 23px;
+    height: 1px;
+    background-color: rgb(22, 22, 22);
+    margin: 5px;
+}
+
+.short-menu .line3 {
+    width: 21px;
+    height: 1px;
+    background-color: rgb(22, 22, 22);
+    margin: 5px;
+}
+
+.short-menu{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 678px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(24,11,80);
+        background: linear-gradient(-45deg, rgba(24,11,80,1) 12%, rgba(22,31,66,1) 37%, rgba(42,74,80,1) 63%, rgba(52,76,79,1) 85%);
+        background-size: 400% 400%;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .main-nav{
+        background: rgb(24,11,80);
+        background: linear-gradient(-45deg, rgba(24,11,80,1) 12%, rgba(22,31,66,1) 37%, rgba(42,74,80,1) 63%, rgba(52,76,79,1) 85%);
+        background-size: 400% 400%;
+    }
+
+    .short-menu{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 100;
+        transform: translateX(0px);
+    }
+}
+
+.container {
+    box-sizing: border-box;
+    background-color: #5b8067;
+    padding: 20px;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+.main h2 {
+    font-size: 2rem;
+    letter-spacing: .1rem;
+}
+
+.main p{
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    cursor: pointer;
+  }
+
+  .column .content .h3 {
+      color: azure;
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column:hover{
+      color: darkcyan;
+      opacity: 40%;
+  }
+  
+  /* Content */
+  /*.content {
+    background-color: white;
+    padding: 10px;
+  }*/
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
