@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(/IMGs/img01.jpg); /*Photo by Artturi Jalli on Unsplash*/
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(IMGs/img01.jpg);
     background-color: #cccccc;
     /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), linear-gradient(-45deg, #313236,#35333d, #120e16, #000000);
     background-size: 400% 400%;*/
