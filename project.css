@@ -9,8 +9,8 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Images/francisco-moreno-zVUy1bN6z3c-unsplash.jpg);
-    background-color: #cccccc;
+    background: rgb(24,11,80);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), linear-gradient(-45deg, rgba(24,11,80,1) 12%, rgba(22,31,66,1) 37%, rgba(42,74,80,1) 63%, rgba(52,76,79,1) 85%);
     /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), linear-gradient(-45deg, #313236,#35333d, #120e16, #000000);
     background-size: 400% 400%;*/
     height: 100vh; /* You must set a specified height */
@@ -157,7 +157,7 @@ body {
 
 .container {
     box-sizing: border-box;
-    background-color: #5b8067;
+    background-color: rgb(235, 227, 223);
     padding: 20px;
 }
 
@@ -179,6 +179,8 @@ body {
   
   .row {
     margin: 8px -16px;
+    display: flexbox;
+    align-items: center;
   }
   
   /* Add padding BETWEEN each column (if you want) */
@@ -188,15 +190,52 @@ body {
   }
   
   /* Create four equal columns that floats next to each other */
-  .column {
+  .column1 {
     float: left;
     width: 50%;
     cursor: pointer;
+    padding: 8px;
   }
 
-  .column .content .h3 {
-      color: azure;
+  .column1 a{
+    color: black;
+}
+
+
+  .column2 {
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    padding: 8px;
   }
+
+  .column2 a{
+    color: black;
+}
+
+  .column3 {
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .column3 a{
+    color: black;
+}
+
+  .column4 {
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .column4 a{
+    color: black;
+}
+
+  
   
   /* Clear floats after rows */
   .row:after {
